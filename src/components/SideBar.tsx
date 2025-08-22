@@ -16,7 +16,7 @@ import SecondaryButton from './ui/SecondaryButton';
 
 export default function SideBar() {
   return (
-    <aside className='hidden md:block flex-1 rounded-2xl stick top-0  sidebar-container sidebar-gradient'>
+    <aside className='hidden md:block rounded-2xl sidebar-container sidebar-gradient'>
       {/* Logo and Header */}
       <div className='flex items-center justify-between mt-6 mb-6'>
         {/* Logo + Text */}
@@ -40,12 +40,11 @@ export default function SideBar() {
       <Divider />
       {/* navigation menus */}
       <div className='mt-6 flex flex-col gap-6 mb-32'>
-        <SecondaryButton
-          text='Nadira Sleep'
-          imgSrc='/svg/Nadira.svg'
-          className='text-white bg-secondary-white-900 flex items-center justify-between'
-          icon={<LucideChevronDown />}
-        />
+        <button className='flex items-center gap-2 text-body-2 hover:bg-white hover:text-black cursor-pointer text-white rounded-full px-4 py-3 bg-secondary-white-900 font-medium'>
+          <img src='/svg/Nadira.svg' alt='logo' />
+          Nadira Sleep
+          <LucideChevronDown className='ml-auto' />
+        </button>
         <SecondaryButton
           icon={<LucideHome />}
           text='Brands'

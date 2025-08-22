@@ -16,7 +16,7 @@ export default function SecondaryButton({
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-3 rounded-full text-body-2  hover:bg-white hover:text-black w-full gap-2 font-medium cursor-pointer ${className}`}
+      className={`px-4 py-3 rounded-full text-body-2 hover:bg-white hover:text-black w-full gap-2 font-medium cursor-pointer ${className}`}
     >
       {icon}
       <div className='flex gap-2 items-center justify-center'>
