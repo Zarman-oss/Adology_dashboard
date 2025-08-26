@@ -7,15 +7,15 @@ import {
   LucideThumbsUp,
 } from 'lucide-react';
 import { useState } from 'react';
-import Carousel from './Carousel';
-import ProgressBar from './ProgressBar';
-import PrimaryButton from './ui/PrimaryButton';
+import ProgressBar from '@/components/ProgressBar';
+import Carousel from '@/components/ui/Carousel';
+import PrimaryButton from '@/components/ui/PrimaryButton';
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState('Competitor Trends');
 
   return (
-    <main className='dashboard-container bg-dashboard rounded-2xl flex-1 p-4'>
+    <main className='bg-dashboard rounded-2xl dashboard-container w-[80%]'>
       {/* Top buttons */}
       <div className='mx-auto gap-4 p-6 flex items-center justify-center flex-wrap sm:justify-start'>
         <PrimaryButton icon={<LucideSearch />} text='Explore' />
@@ -41,17 +41,16 @@ export default function Dashboard() {
       </div>
 
       {/* Chart */}
-      {/* right now its just an image */}
-      <img src='/svg/Chart.svg' className='mx-auto' />
+      <img src='/svg/Chart.svg' className='w-full mx-auto' />
 
       {/* Top Trends */}
-      <div className='max-w-6xl mx-auto rounded-[12px] bg-secondary-white-800 p-3 mt-6'>
-        <div className='flex gap-1 items-center justify-start w-full mb-4 '>
+      <div className='w-full mx-auto rounded-[12px] bg-secondary-white-800 p-3 mt-6'>
+        <div className='flex gap-1 items-center justify-start w-full mb-4'>
           <img src='/svg/top-trends.svg' />
           <h3 className='text-white text-caption-1 font-medium'>Top Trends</h3>
         </div>
         <Divider />
-        {/* checkbox section */}
+        {/* Checkbox section */}
         <div className='max-h-48 overflow-y-auto'>
           <ProgressBar
             progress={213}
@@ -127,7 +126,8 @@ export default function Dashboard() {
       </div>
 
       {/* Carousel */}
-      <Carousel />
+      <Carousel carouselnumber={1} />
+      <Carousel carouselnumber={2} />
     </main>
   );
 }

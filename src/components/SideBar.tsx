@@ -1,31 +1,23 @@
 import {
   LucideBell,
   LucideChevronDown,
-  LucideDraftingCompass,
-  LucideHatGlasses,
-  LucideHome,
-  LucideMessageCircle,
-  LucideNotebook,
-  LucideSearch,
   LucideSettings,
-  LucideShoppingBag,
   LucideUserPlus,
 } from 'lucide-react';
+import { NavLink } from 'react-router';
 import Divider from './ui/Divider';
 import SecondaryButton from './ui/SecondaryButton';
+import { navItems } from '@/data/navItems';
 
 export default function SideBar() {
   return (
-    <aside className='hidden md:block rounded-2xl sidebar-container sidebar-gradient'>
-      {/* Logo and Header */}
-      <div className='flex items-center justify-between mt-6 mb-6'>
-        {/* Logo + Text */}
+    <aside className='hidden md:flex flex-col sticky top-0 h-screen rounded-2xl sidebar-container sidebar-gradient'>
+      {/* Header */}
+      <div className='flex items-center justify-between mb-4 flex-wrap'>
         <div className='flex items-center gap-2'>
           <img src='/svg/Logo.svg' alt='logo' className='w-6 h-6' />
           <span className='text-heading-6 font-bold text-white'>ADOLOGY</span>
         </div>
-
-        {/* Notifications + Profile Icon */}
         <div className='flex items-center gap-2'>
           <span className='p-2 bg-secondary-white-900 rounded-full flex items-center justify-center'>
             <LucideBell width={18} height={18} className='text-white' />
@@ -37,65 +29,58 @@ export default function SideBar() {
           />
         </div>
       </div>
-      <Divider />
-      {/* navigation menus */}
-      <div className='mt-6 flex flex-col gap-6 mb-32'>
+
+      <Divider className='mt-4 mb-4' />
+
+      {/* nav */}
+      <div className='mt-4 flex flex-col gap-4 flex-1'>
         <button className='flex items-center gap-2 text-body-2 hover:bg-white hover:text-black cursor-pointer text-white rounded-full px-4 py-3 bg-secondary-white-900 font-medium'>
           <img src='/svg/Nadira.svg' alt='logo' />
           Nadira Sleep
           <LucideChevronDown className='ml-auto' />
         </button>
-        <SecondaryButton
-          icon={<LucideHome />}
-          text='Brands'
-          className='text-white flex items-center'
-        />
-        <SecondaryButton
-          icon={<LucideSearch />}
-          text='Inspire'
-          className='text-black bg-white flex items-center'
-        />
-        <SecondaryButton
-          text='Market Intelligence'
-          icon={<LucideShoppingBag />}
-          className='text-white flex items-center'
-        />
-        <SecondaryButton
-          text='Ad Spend'
-          icon={<LucideDraftingCompass />}
-          className='text-white flex items-center'
-        />
-        <SecondaryButton
-          text='Track Band'
-          icon={<LucideHatGlasses />}
-          className='text-white flex items-center'
-        />
-        <SecondaryButton
-          text='Brief Module'
-          icon={<LucideNotebook />}
-          className='text-white flex items-center'
-        />
-        <SecondaryButton
-          text='Inquire'
-          icon={<LucideMessageCircle />}
-          className='text-white flex items-center'
-        />
+
+        {navItems.map(({ to, text, icon: Icon }) => (
+          <NavLink key={to} to={to}>
+            {({ isActive }) => (
+              <SecondaryButton
+                text={text}
+                icon={<Icon size={18} />}
+                className={`flex items-center ${
+                  isActive ? 'bg-white text-black' : 'text-white'
+                }`}
+              />
+            )}
+          </NavLink>
+        ))}
       </div>
 
-      <Divider />
-      {/* setting */}
+      <Divider className='mt-4 mb-4' />
 
-      <div className='flex flex-col gap-2 mt-6'>
-        <SecondaryButton
-          text='Setting'
-          className='text-white flex items-center'
-          icon={<LucideSettings />}
-        />
-        <SecondaryButton
-          text='Invite'
-          className='text-white flex items-center'
-          icon={<LucideUserPlus />}
-        />
+      {/* settings */}
+      <div className='flex flex-col gap-2 mt-4'>
+        <NavLink to='/settings'>
+          {({ isActive }) => (
+            <SecondaryButton
+              text='Setting'
+              icon={<LucideSettings size={18} />}
+              className={`flex items-center ${
+                isActive ? 'bg-white text-black' : 'text-white'
+              }`}
+            />
+          )}
+        </NavLink>
+        <NavLink to='/inactive'>
+          {({ isActive }) => (
+            <SecondaryButton
+              text='Invite'
+              icon={<LucideUserPlus size={18} />}
+              className={`flex items-center ${
+                isActive ? 'bg-white text-black' : 'text-white'
+              }`}
+            />
+          )}
+        </NavLink>
       </div>
     </aside>
   );

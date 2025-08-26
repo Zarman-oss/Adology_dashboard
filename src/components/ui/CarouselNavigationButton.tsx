@@ -5,10 +5,10 @@ export default function CarouselNavigationButton() {
     <div className='flex items-center justify-between mt-2'>
       {/* Indicator */}
       <div className='rounded-full p-1 bg-secondary-white-900 flex items-center justify-center'>
-        <LucideDot color='white' height={20} width={20} />
-        <LucideDot color='white' height={20} width={20} />
-        <LucideDot color='white' height={20} width={20} />
-        <LucideDot color='white' height={20} width={20} />
+        <LucideDot color='white' height={24} width={24} />
+        <LucideDot color='white' height={24} width={24} />
+        <LucideDot color='white' height={24} width={24} />
+        <LucideDot color='white' height={24} width={24} />
       </div>
 
       {/* buttons */}
