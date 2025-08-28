@@ -1,8 +1,8 @@
-import Dashboard from '@/components/Dashboard';
+import InspirePageContent from '@/components/InspirePageModules/InspirePageContent';
 export default function Inspire() {
   return (
     <>
-      <Dashboard />
+      <InspirePageContent />
     </>
   );
 }

@@ -1,11 +1,11 @@
-// App.tsx
-import { Routes, Route, Navigate } from 'react-router';
-import './App.css';
 import Layout from '@/layout/layout';
-import Dashboard from './components/Dashboard';
+import { Navigate, Route, Routes } from 'react-router';
+import './App.css';
+
+import InspirePageContent from './components/InspirePageModules/InspirePageContent';
+
 import Inspire from './pages/Inspire';
 
-// quick stubs (jab tak real pages na ho)
 const Brands = () => <div className='dashboard-container p-4'>Brands</div>;
 const MarketIntelligence = () => (
   <div className='dashboard-container p-4'>Market Intelligence</div>
@@ -26,7 +26,7 @@ export default function App() {
       {/* Layout with persistent sidebar */}
       <Route path='/' element={<Layout />}>
         {/* index = "/" */}
-        <Route index element={<Dashboard />} />
+        <Route index element={<InspirePageContent />} />
 
         {/* your existing route */}
         <Route path='inspire' element={<Inspire />} />

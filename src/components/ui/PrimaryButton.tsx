@@ -1,32 +1,27 @@
-import { ReactNode } from 'react';
-
-type ButtonProps = {
+type PrimaryButtonProps = {
   text: string;
-  icon?: ReactNode;
+  icon?: React.ReactNode;
   onClick?: () => void;
-  className?: string;
+  isActive?: boolean;
 };
 
 export default function PrimaryButton({
   text,
   icon,
   onClick,
-  className = '',
-}: ButtonProps) {
+  isActive = false,
+}: PrimaryButtonProps) {
   return (
     <button
       onClick={onClick}
-      className={`w-full sm:w-auto px-3 sm:px-4 py-2 sm:py-3
-        rounded-full flex items-center justify-center gap-2 font-medium cursor-pointer
-        bg-secondary-white-900 text-text-light-silver text-body-2
-        hover:bg-white hover:text-black transition-colors duration-200
-        ${className}`}
+      className={`flex items-center gap-2 rounded-full px-4 cursor-pointer py-3 font-medium transition-colors
+        ${
+          isActive
+            ? 'bg-white text-black'
+            : 'bg-secondary-white-900 text-white hover:bg-white hover:text-black'
+        }`}
     >
-      {icon && (
-        <span className='w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center'>
-          {icon}
-        </span>
-      )}
+      {icon && <span>{icon}</span>}
       {text}
     </button>
   );
