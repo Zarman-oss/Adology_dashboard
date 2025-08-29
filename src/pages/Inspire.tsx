@@ -1,4 +1,5 @@
-import InspirePageContent from '@/components/InspirePageModules/InspirePageContent';
+import InspirePageContent from '../InspirePageModules/InspirePageContent';
+
 export default function Inspire() {
   return (
     <>

@@ -1,8 +1,8 @@
 import Carousel from '@/components/ui/Carousel';
 import NavigationButton from '@/components/ui/NavigationButton';
 import { useState } from 'react';
-import ProductCard from '../ui/ProductCard';
-import CarouselCard from '../ui/CarouselCard';
+import CarouselCard from '../components/ui/CarouselCard';
+import ProductCard from '../components/ui/ProductCard';
 
 export default function Explore() {
   const [subTab, setSubTab] = useState('For You');

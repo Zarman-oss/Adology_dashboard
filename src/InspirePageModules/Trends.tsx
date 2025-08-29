@@ -1,9 +1,9 @@
-import ProgressBar from '@/components/ProgressBar';
 import Carousel from '@/components/ui/Carousel';
 import Divider from '@/components/ui/Divider';
 import NavigationButton from '@/components/ui/NavigationButton';
+import ProgressBar from '@/components/ui/ProgressBar';
 import { useState } from 'react';
-import PrimaryButton from '../ui/PrimaryButton';
+import Chart from '../components/ui/Chart';
 
 export default function Trends() {
   const [subTab, setSubTab] = useState('Competitor Trends');
@@ -28,7 +28,9 @@ export default function Trends() {
       {subTab === 'Competitor Trends' && (
         <>
           {/* Chart */}
-          <img src='/svg/Chart.svg' className='w-full mx-auto' />
+
+          <Chart />
+
           {/* Top Trends */}
           <div className='w-full mx-auto rounded-[12px] bg-secondary-white-800 p-3 mt-6'>
             <div className='flex gap-1 items-center justify-start w-full mb-4'>

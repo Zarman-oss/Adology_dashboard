@@ -1,14 +1,14 @@
-import { LucideChevronLeft, LucideChevronRight, LucideDot } from 'lucide-react';
+import { LucideChevronLeft, LucideChevronRight } from 'lucide-react';
 
 export default function CarouselNavigationButton() {
   return (
     <div className='flex items-center justify-between mt-2'>
       {/* Indicator */}
-      <div className='rounded-full p-1 bg-secondary-white-900 flex items-center justify-center'>
-        <LucideDot color='white' height={24} width={24} />
-        <LucideDot color='white' height={24} width={24} />
-        <LucideDot color='white' height={24} width={24} />
-        <LucideDot color='white' height={24} width={24} />
+      <div className='rounded-full p-3 bg-secondary-white-900 flex items-center justify-center gap-5'>
+        <div className='w-2 h-2 bg-white rounded-full' />
+        <div className='w-2 h-2 bg-secondary-white-800 rounded-full' />
+        <div className='w-2 h-2 bg-secondary-white-800 rounded-full' />
+        <div className='w-2 h-2 bg-secondary-white-800 rounded-full' />
       </div>
 
       {/* buttons */}

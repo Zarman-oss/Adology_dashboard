@@ -2,9 +2,10 @@ import Layout from '@/layout/layout';
 import { Navigate, Route, Routes } from 'react-router';
 import './App.css';
 
-import InspirePageContent from './components/InspirePageModules/InspirePageContent';
+import InspirePageContent from './InspirePageModules/InspirePageContent';
 
 import Inspire from './pages/Inspire';
+import BrandPageContent from './BrandPageModules/BrandPageContent';
 
 const Brands = () => <div className='dashboard-container p-4'>Brands</div>;
 const MarketIntelligence = () => (
@@ -32,7 +33,7 @@ export default function App() {
         <Route path='inspire' element={<Inspire />} />
 
         {/* stubs matching your sidebar links */}
-        <Route path='brands' element={<Brands />} />
+        <Route path='brands' element={<BrandPageContent />} />
         <Route path='market-intelligence' element={<MarketIntelligence />} />
         <Route path='ad-spend' element={<AdSpend />} />
         <Route path='track-band' element={<TrackBand />} />

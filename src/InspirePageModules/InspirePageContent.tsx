@@ -1,7 +1,4 @@
-import Explore from '@/components/InspirePageModules/Explore';
-import Recommendations from '@/components/InspirePageModules/Recommendations';
-import SavedAds from '@/components/InspirePageModules/SavedAds';
-import Trends from '@/components/InspirePageModules/Trends';
+import Explore from './Explore';
 import Divider from '@/components/ui/Divider';
 import PrimaryButton from '@/components/ui/PrimaryButton';
 import {
@@ -11,6 +8,9 @@ import {
   LucideThumbsUp,
 } from 'lucide-react';
 import { useState } from 'react';
+import Recommendations from './Recommendations';
+import SavedAds from './SavedAds';
+import Trends from './Trends';
 
 export default function InspirePageContent() {
   const [mainTab, setMainTab] = useState<
