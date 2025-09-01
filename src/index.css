@@ -288,7 +288,6 @@
   }
 }
 @layer layout {
-  /* Global wrapper for pages/sections */
   .wrapper {
     @apply mx-auto px-4 sm:px-6 lg:px-8;
   }

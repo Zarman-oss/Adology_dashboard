@@ -12,7 +12,7 @@ import Divider from './ui/Divider';
 import SecondaryButton from './ui/SecondaryButton';
 
 export default function SideBar() {
-  const [showMenu, setShowMenu] = useState(false); // Fixed: Single useState declaration
+  const [showMenu, setShowMenu] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
   const [notifications, setNotifications] = useState([
     {
@@ -72,7 +72,7 @@ export default function SideBar() {
       : notifications.filter((n) => n.category === activeFilter);
 
   return (
-    <aside className='hidden md:flex flex-col sticky top-0 h-[900px] rounded-2xl sidebar-container sidebar-gradient'>
+    <aside className='hidden lg:flex flex-col sticky top-0 h-[900px] rounded-2xl sidebar-container sidebar-gradient'>
       {/* Header */}
       <div className='flex items-center justify-between mb-4 flex-wrap relative'>
         <div className='flex items-center gap-2'>

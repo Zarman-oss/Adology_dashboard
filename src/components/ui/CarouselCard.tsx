@@ -22,7 +22,7 @@ export default function CarouselCard({
   buttonText,
 }: CarouselCardProps) {
   return (
-    <div className='bg-secondary-white-900 aspect-square rounded-2xl'>
+    <div className='bg-secondary-white-900  rounded-2xl'>
       {/* Header */}
       <article className='flex flex-wrap justify-between items-center p-3 gap-2'>
         {/* Logo + Title */}
@@ -59,9 +59,15 @@ export default function CarouselCard({
 
         {/* Save to inspiration */}
         <div className='bg-secondary-white-50 rounded-full px-4 py-2 w-full flex justify-between mt-3'>
-          <img src='/svg/plus-sign.svg' alt='plus-sign' />
+          <button className=' cursor-pointer'>
+            <img src='/svg/plus-sign.svg' alt='plus-sign' />
+          </button>
+
           <p className='font-medium text-body-sm'>Save to inspiration</p>
-          <img src='/svg/arrow-down.svg' alt='arrow' />
+
+          <button className='cursor-pointer'>
+            <img src='/svg/arrow-down.svg' alt='arrow' />
+          </button>
         </div>
       </div>
     </div>

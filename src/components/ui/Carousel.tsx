@@ -38,6 +38,7 @@ export default function Carousel({
       <CarouselContainer />
 
       {/* Carousel Navigation */}
+
       <CarouselNavigationButton />
     </>
   );

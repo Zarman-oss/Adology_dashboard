@@ -10,11 +10,6 @@ export default function BrandPageContent() {
         <PrimaryButton icon={<LucideAnnoyed />} text='Button' />
         <PrimaryButton icon={<LucideAnnoyed />} text='Button' />
       </div>
-
-      <div className='grid grid-cols-[200px_100px] justify-between max-w-6xl h-[300px]'>
-        <div className='bg-blue-800'>Column 1</div>
-        <div className='bg-yellow-200'>Column 2</div>
-      </div>
     </main>
   );
 }

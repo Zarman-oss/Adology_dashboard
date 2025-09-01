@@ -27,8 +27,6 @@ export default function Trends() {
       {/* Tab Content */}
       {subTab === 'Competitor Trends' && (
         <>
-          {/* Chart */}
-
           <Chart />
 
           {/* Top Trends */}
@@ -39,17 +37,10 @@ export default function Trends() {
                 Top Competitor Trends
               </h3>
             </div>
+
             <Divider />
-            <div className='max-h-48 overflow-y-auto'>
-              {[...Array(10)].map((_, i) => (
-                <ProgressBar
-                  key={i}
-                  progress={213}
-                  label={`Competitor Trend #${i + 1}`}
-                  isChecked={true}
-                />
-              ))}
-            </div>
+
+            <ProgressBar />
           </div>
 
           {/* Carousels */}
