@@ -22,7 +22,7 @@ export default function CarouselCard({
   buttonText,
 }: CarouselCardProps) {
   return (
-    <div className='bg-secondary-white-900  rounded-2xl'>
+    <div className='bg-secondary-white-900 rounded-2xl card-border'>
       {/* Header */}
       <article className='flex flex-wrap justify-between items-center p-3 gap-2'>
         {/* Logo + Title */}

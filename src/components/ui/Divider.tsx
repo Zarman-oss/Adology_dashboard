@@ -1,5 +1,5 @@
 export default function Divider({ className = '' }) {
   return (
-    <div className={`w-full h-[2px] bg-secondary-white-900 ${className}`} />
+    <div className={`w-full h-[1px] bg-secondary-white-800 ${className}`} />
   );
 }

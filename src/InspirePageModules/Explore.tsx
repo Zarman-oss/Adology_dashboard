@@ -1,5 +1,13 @@
 import Carousel from '@/components/ui/Carousel';
 import NavigationButton from '@/components/ui/NavigationButton';
+import {
+  LucideCalendar,
+  LucideEye,
+  LucideImage,
+  LucideListFilter,
+  LucideSearch,
+  LucideX,
+} from 'lucide-react';
 import { useState } from 'react';
 import CarouselCard from '../components/ui/CarouselCard';
 import ProductCard from '../components/ui/ProductCard';
@@ -126,8 +134,34 @@ export default function Explore() {
       )}
 
       {subTab === 'Ad Library' && (
-        <div className='mx-auto mt-4'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'>
+        <div className='mx-auto'>
+          <div className='flex items-center justify-between flex-wrap pb-6'>
+            <div className='flex items-center gap-2 flex-wrap mb-3 mt-3 md:mb-0'>
+              <div className='bg-secondary-white-900 flex gap-1 rounded-full text-white py-3 px-4'>
+                <LucideSearch className='cursor-pointer' />
+                <input type='text' placeholder='Search...' />
+              </div>
+              <div className='bg-secondary-white-900 text-body-2 font-medium flex gap-1 rounded-full text-white py-3 px-4 transition-colors cursor-pointer hover:bg-white hover:text-black'>
+                <LucideListFilter />
+                Add a Filter
+              </div>
+              <div className='bg-secondary-white-900 text-body-2 font-medium flex gap-1 rounded-full text-white py-3 px-4 cursor-pointer hover:bg-white hover:text-black transition-colors'>
+                <LucideImage />
+                Image
+                <LucideX />
+              </div>
+            </div>
+            <div className='flex items-center gap-2'>
+              <div className='bg-secondary-white-900 text-body-2 font-medium flex gap-1 rounded-full text-white py-3 px-4 cursor-pointer hover:bg-white hover:text-black transition-colors'>
+                <LucideCalendar />
+                All Time
+              </div>
+              <div className='bg-secondary-white-900 rounded-full text-white h-12 w-12 flex items-center justify-center cursor-pointer hover:bg-white hover:text-black transition-colors'>
+                <LucideEye />
+              </div>
+            </div>
+          </div>
+          <div className='grid grid-cols-1 w-full sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4'>
             <CarouselCard
               logo='/svg/Nectar.svg'
               title='Nectar'

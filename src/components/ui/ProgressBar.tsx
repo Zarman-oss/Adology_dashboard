@@ -34,7 +34,7 @@ export default function ProgressBars() {
         return (
           <div
             key={item.id}
-            className='flex p-2 gap-3 items-center justify-between'
+            className='flex p-2 gap-3 items-center justify-between flex-wrap'
           >
             <div className='flex items-center gap-2'>
               <label

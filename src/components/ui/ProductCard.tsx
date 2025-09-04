@@ -7,7 +7,7 @@ export default function ProductCard({
   brands = [],
 }) {
   return (
-    <div className='bg-secondary-white-900 rounded-2xl mt-4'>
+    <div className='bg-secondary-white-900 rounded-2xl mt-4 card-border'>
       {/* Top header */}
       <article className='flex items-center justify-between p-3'>
         <h2 className='text-white text-caption-1 font-medium'>{titleText}</h2>

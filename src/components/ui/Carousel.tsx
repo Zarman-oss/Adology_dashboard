@@ -1,6 +1,5 @@
 import PrimaryButton from '@/components/ui/PrimaryButton';
 import CarouselContainer from './CarouselContainer';
-import CarouselNavigationButton from './CarouselNavigationButton';
 
 type CarouselProps = {
   carouselNumber?: number | string;
@@ -36,10 +35,6 @@ export default function Carousel({
 
       {/* Cards */}
       <CarouselContainer />
-
-      {/* Carousel Navigation */}
-
-      <CarouselNavigationButton />
     </>
   );
 }
