@@ -2,12 +2,12 @@ import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CarouselCard from './CarouselCard';
 import CarouselNavigationButton from './CarouselNavigationButton';
-
 import 'swiper/css';
 
 export default function CarouselContainer() {
   const swiperRef = useRef(null);
   const [swiperLoaded, setSwiperLoaded] = useState(false);
+
   const cards = [
     {
       logo: '/svg/Nectar.svg',
@@ -98,6 +98,8 @@ export default function CarouselContainer() {
         modules={[]}
         spaceBetween={16}
         slidesPerView={1}
+        loop={true}
+        loopedSlides={cards.length}
         breakpoints={{
           640: { slidesPerView: 2, spaceBetween: 16 },
           768: { slidesPerView: 3, spaceBetween: 16 },
